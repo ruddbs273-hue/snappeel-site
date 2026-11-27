@@ -1,0 +1,25 @@
+/* 스냅필 지원·개인정보 페이지. 시스템 글꼴, 기기 설정에 따라 밝게/어둡게 */
+:root { color-scheme: light dark; --text: #14181F; --muted: #6B7280; --line: #E5E7EB; --link: #2F6FEB; --bg: #FFFFFF; }
+@media (prefers-color-scheme: dark) {
+  :root { --text: #F2F4F8; --muted: #9AA3B5; --line: #232A36; --link: #6EA2FF; --bg: #0C1018; }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0; background: var(--bg); color: var(--text);
+  font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Segoe UI", "Malgun Gothic", sans-serif;
+  word-break: keep-all; overflow-wrap: break-word;
+}
+main { max-width: 680px; margin: 0 auto; padding: 48px 24px 80px; }
+h1 { font-size: 28px; line-height: 1.25; margin: 8px 0 4px; letter-spacing: -0.01em; }
+h2 { font-size: 18px; margin: 36px 0 8px; }
+h3 { font-size: 16px; margin: 20px 0 4px; }
+p { margin: 0 0 12px; }
+a { color: var(--link); text-decoration: none; }
+a:hover { text-decoration: underline; }
+hr { border: 0; border-top: 1px solid var(--line); margin: 56px 0; }
+.lang { font-size: 14px; color: var(--muted); margin-bottom: 32px; }
+.muted { color: var(--muted); font-size: 14px; }
+.summary { margin: 20px 0 8px; border-top: 1px solid var(--line); }
+.summary div { display: flex; justify-content: space-between; gap: 16px; padding: 10px 0; border-bottom: 1px solid var(--line); }
+.summary dt { margin: 0; }
+.summary dd { margin: 0; color: var(--muted); text-align: right; }
